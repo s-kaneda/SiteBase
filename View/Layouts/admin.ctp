@@ -16,8 +16,9 @@
     
 	<?php
 		echo $this->Html->meta('icon');
+        echo $this->Html->css('app');        
+
 		echo $this->Html->css('admin');
-                
                 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -45,8 +46,8 @@
 			フッター
 		</div>
 	</div>
-    <!--<p><?= var_dump($login_user);?></p>-->
+    <!--<p></p>-->
     
-	<?php echo $this->element('sql_dump'); ?>
+	<?php //echo $this->element('sql_dump'); ?>
 </body>
 </html>

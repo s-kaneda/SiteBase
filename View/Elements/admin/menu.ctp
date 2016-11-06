@@ -9,6 +9,13 @@
             'controller' => 'users',
             'action' => 'index',
         ], ['class'=>'list-group-item']
+        
     );?>
+        <?= $this->Html->link(
+            'Post',[
+                'controller' => 'posts',
+                'action' => 'index',
+            ], ['class'=>'list-group-item']
+        );?>
     </center>
 </div>

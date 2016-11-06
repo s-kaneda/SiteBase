@@ -1,6 +1,6 @@
 <div class="users form">	
     <h2>ユーザー情報編集</h2>
-    <?php echo $this->Form->create('User'); ?>
+    <?php echo $this->Form->create('User',['novalidate' => 'novalidate']); ?>
     <div class="form-group">
         <?=$this->Form->input('username',[
             'type'=> 'text',
@@ -14,7 +14,7 @@
             'type'=> 'password',
             'label' => 'パスワード',
             'class' => 'form-control',
-
+            'placeholder' => 'password', 
             ]);?>
     </div>
     <div class="form-group">

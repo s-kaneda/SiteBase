@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Login base</a>
+      <a class="navbar-brand" href="/">Site base</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

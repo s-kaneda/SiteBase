@@ -17,7 +17,7 @@ class User extends AppModel {
         $this->data['User']['password'] = $passwordHasher->hash(
             $this->data['User']['password']
         );
-    }
+}
     return true;
 }
 /**
@@ -26,11 +26,11 @@ class User extends AppModel {
  * @var array
  */
 	public $validate = array(
-                //フィールド名            
+        //フィールド名            
 		'username' => array(
-                        //  バリデーション名                  
+            //バリデーション名                  
 			'Blank' => array(
-                                //バリデーションのルール                            
+                //バリデーションのルール                            
 				'rule' => array('notBlank'),
 				'message' => 'メッセージが入力されてません',
 				//'allowEmpty' => false,

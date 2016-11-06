@@ -22,7 +22,7 @@
             'label' => '権限',
         ]);?>
     </div>
-    <button  class="btn btn-primary">제출</button><br>
+    <button  class="btn btn-primary">送信</button><br>
     <center>
         <button  class="btn btn-default">
             <?= $this->Html->link('一覧へ戻る', array('action' => 'index')); ?>                
