@@ -1,5 +1,6 @@
 <div class="pageimage1">
-    <h1 style="margin-top: 0px;">page1</h1>
+    
+    <h1 class="toptitle">page1</h1>
     このページは静的なページ１です。
 </div>
 

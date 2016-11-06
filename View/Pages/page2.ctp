@@ -2,7 +2,7 @@
 <div class="pageimage2">
   
     <h1 class="toptitle">page2</h1>
-    静的なページ2です。
+    このページは静的なページ2です。
 </div>
 
 <div class ="row">
