@@ -1,15 +1,12 @@
-<div class="pageimage">
-    <h1>page1</h1>
+<div class="pageimage1">
+    
+    <h1 class="toptitle">page1</h1>
     このページは静的なページ１です。
-    <?= $this->Html->image('azumino2.jpg',
-                        array(
-                            'alt' => 'CakePHP',                          
-                            ));?>    
 </div>
 
 <div class ="row">
     <div class ="col-md-8">
-        <h1>ff fortessimo</h1>           
+        <h1>ff fortessimo</h1>
         <h2>f forte</h2>
         <h3>mf mezzoforte</h3>
         <h4>mp mezzopiano</h4>
@@ -35,6 +32,6 @@
     </div> 
 </div>
 
-<p> hugahuga</p>
+<p> </p>
 
 

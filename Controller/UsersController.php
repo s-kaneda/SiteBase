@@ -26,7 +26,7 @@ class UsersController extends AppController {
     }
 
     public function isAuthorized($user) {
-//            parent::isAuthorized();
+//         parent::isAuthorized();
         //一覧表示と詳細表示は誰でも可能            
         if (in_array($this->action, array('index','view','login','logout'))) {
             return true;
@@ -46,6 +46,7 @@ class UsersController extends AppController {
 
         // adminは編集や削除や追加ができる //adminは上記以外のactionにアクセスできる
 //            }
+
 
         return false;
     }        
@@ -125,11 +126,23 @@ class UsersController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+        
 		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Invalid user'));
 		}
+        
 		if ($this->request->is(array('post', 'put'))) {
+            $this->User->id= $id;
+            
+            //psswordのデータは消してしまいます(ハッシュ化されてるので)
+            if(empty($this->request->data['User']['password'])){
+                
+                unset($this->request->data['User']['password']);
+            }
+                
+                
 			if ($this->User->save($this->request->data)) {
+
 				$this->Flash->success(__('The user has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -140,10 +153,9 @@ class UsersController extends AppController {
 //			var_dump($options);
 //                        exit;
                         
-                        $this->request->data = $this->User->find('first', $options);
-//                        var_dump($this->request->data);
-//                        exit;
-//                        エラーになってもリクエストデーターの中に入力されたデータが入り放し。
+            $this->request->data = $this->User->find('first', $options);
+             $this->request->data['User']['password'] = '';
+//              エラーになってもリクエストデーターの中に入力されたデータが入り放し。
 		}
 	}
 
@@ -162,9 +174,9 @@ class UsersController extends AppController {
 		$this->request->allowMethod('post', 'delete');
                 
 		if ($this->User->delete()) {
-			$this->Flash->success(__('The user has been deleted.'));
+			$this->Flash->success('ユーザーを削除しました');
 		} else {
-			$this->Flash->error(__('The user could not be deleted. Please, try again.'));
+			$this->Flash->error('ユーザーを削除できませんでした。もう一度トライして下さい');
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

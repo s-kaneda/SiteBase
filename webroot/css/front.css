@@ -9,20 +9,22 @@ and open the template in the editor.
 */
 .topimage {
     /*webroot/css配下のどこか､という記述になる*/
-      background: url("/img/azumino4.jpg");
+      background: url("/img/sekai1.jpeg");
       background-position: center center;
       /*画像を画面に合わせて最小サイズで表示*/
       background-size: cover;
       height: 700px;
-      color: #fff;
+      color: purple;
       /*親要素*/
       position: relative;
       margin :auto 0;
-    }
+}
+
+    
 
 
 .squere{
-        background-color: blue;
+        background-color: greenyellow;
         
         /*透過性*/
         opacity: 0.8;
@@ -34,25 +36,64 @@ and open the template in the editor.
         /*左寄せする要素を、親要素を基準left:0の絶対位置に配置する。*/
         position: absolute; left: 0;
 
-    }
- 
-    .glyphicon-flash {
+}
+.pageimage1 {
+    /*webroot/css配下のどこか､という記述になる*/
+      background: url("/img/sekai2.jpg");
+      background-position: center center;
+      /*画像を画面に合わせて最小サイズで表示*/
+      background-size: cover;
+      height: 700px;
+      color: pink;
+      /*親要素*/
+      position: relative;
+      margin :auto 0;
+}
+.pageimage2 {
+    /*webroot/css配下のどこか､という記述になる*/
+      background: url("/img/sekai3.jpg");
+      background-position: center center;
+      /*画像を画面に合わせて最小サイズで表示*/
+      background-size: cover;
+      height: 700px;
+      color: red;
+      /*親要素*/
+      position: relative;
+      margin :auto 0;
+}
+.navbar-inverse{
+    margin :auto 0;  
+} 
+    
+.toptitle{
+        margin-top: 0px;
+        padding: 20px
+}    
+    
+.glyphicon-flash {
         font-size: 60px;
     }
-    .glyphicon-sunglasses{
+    
+.glyphicon-sunglasses{
         font-size: 60PX;
     }
-    .icon-bar{
+.icon-bar{
         background-color:#C0C0C0;
-        height:80px;
+        height:100px;
+    }
+.mb1{
+        margin-bottom: 7em;
+    } 
+.mb2{
+        margin-bottom: 20em;
     }
 /*.line p {
 	color: #336666;  文字の色　#336666 
-}
-footer .line a {
-	color: #336666;  文字の色　#336666 
-}
-footer .line {
+}*/
+/*.footer {
+	color: #336666;
+}*/
+/*footer .line {
 	background-color: #00CCCC;  背景の色　#00CCCC 
 	padding: 20px 0;  内側の余白　上下20px　左右0 
 }*/

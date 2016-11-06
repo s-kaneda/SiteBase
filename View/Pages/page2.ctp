@@ -1,11 +1,8 @@
 
-<div class="pageimage">
-    <h1>page2</h1>
-    静的なページ2です。
-    <?= $this->Html->image('azumino2.jpg',
-                        array(
-                            'alt' => 'CakePHP',                          
-                            ));?>    
+<div class="pageimage2">
+  
+    <h1 class="toptitle">page2</h1>
+    このページは静的なページ2です。
 </div>
 
 <div class ="row">
